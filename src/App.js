@@ -4,6 +4,9 @@ import { useDispatch } from 'react-redux';
 import {BrowserRouter as Router,Routes, Route, Link } from "react-router-dom"
 import Home from './components/Home/Home';
 import Passives from './components/Passives/Passives';
+import Classes from './components/Classes/Classes';
+import Spells from './components/Spells/Spells';
+import Races from './components/Races/Races';
 import { getPosts } from './actions/posts';
 import useStyles from './styles';
 import mage from './images/mage.png';
@@ -30,10 +33,10 @@ const App = () => {
       </AppBar>
       <Routes>
         <Route path="/" element={ <Home/>}/>
-        {/* <Route path="/classes" element={<Classes/>}/>
-        <Route path="/spells" element={<Spells/>} />
         <Route path="/passives" element={<Passives/>}/>
-        <Route path="/races" element={<Races/>}/> */}
+        <Route path="/classes" element={<Classes/>}/>
+        <Route path="/spells" element={<Spells/>} />
+        <Route path="/races" element={<Races/>}/>
       </Routes>
     </Router>
     </Container>
