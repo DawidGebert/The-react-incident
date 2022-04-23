@@ -5,7 +5,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-import {blueGrey, cyan } from "@mui/material/colors";
+import {blueGrey, brown } from "@mui/material/colors";
 
 import { reducers } from './reducers';
 import App from './App';
@@ -15,8 +15,8 @@ const store = createStore(reducers, compose(applyMiddleware(thunk)));
 
 const theme = createTheme({
 	palette: {
-		primary: cyan,
-		secondary: blueGrey,
+		primary: brown,
+		secondary: brown,
 		background: {
 			default: "#e6e6e6",
 		},

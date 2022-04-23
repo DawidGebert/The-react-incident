@@ -31,11 +31,11 @@ const App = (props) => {
   const menu = (
     <div>
       <List className='navbar' sx={{ display: "flex", flexDirection: "column", minHeight: "100vh" }} position="static" color="primary">
-        <ListItem button onClick={() => navigate("/")}>Home</ListItem>
-        <ListItem button onClick={() => navigate("/classes")}>Classes</ListItem>
-        <ListItem button onClick={() => navigate("/races")}>Races</ListItem>
-        <ListItem button onClick={() => navigate("/spells")}>Spells</ListItem>
-        <ListItem button onClick={() => navigate("/passives")}>Passives</ListItem>
+        <ListItem button onClick={() => {navigate("/"); handleDrawerToggle();}}>Home</ListItem>
+        <ListItem button onClick={() => {navigate("/classes"); handleDrawerToggle();}}>Classes</ListItem>
+        <ListItem button onClick={() => {navigate("/races"); handleDrawerToggle();}}>Races</ListItem>
+        <ListItem button onClick={() => {navigate("/spells"); handleDrawerToggle();}}>Spells</ListItem>
+        <ListItem button onClick={() => {navigate("/passives"); handleDrawerToggle();}}>Passives</ListItem>
       </List>
       </div>
   )
