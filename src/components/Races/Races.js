@@ -1,12 +1,10 @@
-import { Container } from '@material-ui/core';
+import { Container } from '@mui/material';
 import React from 'react';
-import useStyles from './styles';
 
 const Races = ({ setCurrentId }) => {
-  const classes = useStyles();
 
   return (
-    <Container className={classes.container} maxWidth="lg">Races page</Container>
+    <Container maxWidth="lg">Races page</Container>
   );
 };
 

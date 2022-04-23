@@ -1,12 +1,9 @@
-import { Container } from '@material-ui/core';
+import { Container } from '@mui/material';
 import React from 'react';
-import useStyles from './styles';
 
 const Spells = ({ setCurrentId }) => {
-  const classes = useStyles();
-
   return (
-    <Container className={classes.container} maxWidth="lg">Spells page</Container>
+    <Container maxWidth="lg">Spells page</Container>
   );
 };
 

@@ -1,12 +1,10 @@
-import { Container } from '@material-ui/core';
+import { Container } from '@mui/material';
 import React from 'react';
-import useStyles from './styles';
 
 const Home = ({ setCurrentId }) => {
-  const classes = useStyles();
 
   return (
-    <Container className={classes.container} maxWidth="lg">Home page</Container>
+    <Container maxWidth="lg">Home page: This is my attempt to create a TTRPG :/</Container>
   );
 };
 
