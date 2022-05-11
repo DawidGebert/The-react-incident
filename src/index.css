@@ -15,3 +15,13 @@ img {
     color: white;
     font-weight: bold;
 }
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.classCard {
+    border: solid black ;
+    min-width: 200px;
+    min-height: 300px;
+}
