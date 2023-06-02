@@ -9,6 +9,7 @@ import Spells from './components/Spells/Spells';
 import Races from './components/Races/Races';
 import { getPosts } from './actions/posts';
 import MenuIcon from "@mui/icons-material/Menu";
+import Basics from './components/Basics/Basics';
 
 const drawerWidth = 240;
 
@@ -17,6 +18,7 @@ const App = (props) => {
   const [currentId, setCurrentId] = useState(0);
   const dispatch = useDispatch();
   const [mobileOpen, setMobileOpen] = React.useState(false);
+  const [card, setCard] = useState("Strona Główna");
 
   useEffect(() => {
     dispatch(getPosts());
@@ -31,11 +33,13 @@ const App = (props) => {
   const menu = (
     <div>
       <List className='navbar' sx={{ display: "flex", flexDirection: "column", minHeight: "100vh" }} position="static" color="primary">
-        <ListItem button onClick={() => {navigate("/"); handleDrawerToggle();}}>Home</ListItem>
-		<ListItem button onClick={() => {navigate("/races"); handleDrawerToggle();}}>Races</ListItem>
-        <ListItem button onClick={() => {navigate("/classes"); handleDrawerToggle();}}>Classes</ListItem>
-        <ListItem button onClick={() => {navigate("/spells"); handleDrawerToggle();}}>Spells</ListItem>
-        <ListItem button onClick={() => {navigate("/passives"); handleDrawerToggle();}}>Passives</ListItem>
+        <ListItem button onClick={() => {navigate("/");setCard("Strona Główna"); handleDrawerToggle();}}>Strona Główna</ListItem>
+		<ListItem button onClick={() => {navigate("/basics");setCard("Podstawy"); handleDrawerToggle();}}>Podstawy</ListItem>
+		<ListItem button onClick={() => {navigate("/passives");setCard("Tura Walki"); handleDrawerToggle();}}>Tura Walki</ListItem>
+		<ListItem button onClick={() => {navigate("/races");setCard("Rasy"); handleDrawerToggle();}}>Rasy</ListItem>
+        <ListItem button onClick={() => {navigate("/classes");setCard("Klasy"); handleDrawerToggle();}}>Klasy</ListItem>
+        <ListItem button onClick={() => {navigate("/spells");setCard("Zaklęcia"); handleDrawerToggle();}}>Zaklęcia</ListItem>
+		<ListItem button onClick={() => {navigate("/feats");setCard("Cechy"); handleDrawerToggle();}}>Cechy</ListItem>
       </List>
       </div>
   )
@@ -57,7 +61,7 @@ const App = (props) => {
 						<MenuIcon className='white'/>
 					</IconButton>
 					<Typography className='white' variant="h5" noWrap component="div" onClick={() => navigate("/")}>
-						RPGProject
+						{card}
 					</Typography>
 				</Toolbar>
 			</AppBar>
@@ -106,6 +110,7 @@ const App = (props) => {
           <Route path="/classes" element={<Classes/>}/>
           <Route path="/spells" element={<Spells/>} />
           <Route path="/races" element={<Races/>}/>
+		  <Route path="/basics" element={<Basics/>}/>
         </Routes>
 			</Box>
 		</Box>

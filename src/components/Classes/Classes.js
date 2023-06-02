@@ -7,7 +7,8 @@ import classes from "../../constants/classes"
 const Classes = ({setCurrentId }) => {
   return (
     <Container maxWidth="lg">
-      <div id="movies-list">
+		pusto...
+      {/* <div id="movies-list">
 			<Container>
 				<Grid container spacing={3} component={motion.div} layout>
         {classes.map((cl) => (
@@ -17,7 +18,7 @@ const Classes = ({setCurrentId }) => {
 					))}
 				</Grid>
 			</Container>
-		</div>
+		</div> */}
     </Container>
   );
 };
