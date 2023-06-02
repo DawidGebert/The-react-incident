@@ -47,7 +47,7 @@ const classes = [
     {
         id: 9,
         name: "Wizard",
-        description: "może wymasterować szkoły magii i łatwo sie uczy zaklęć i potrafi ze zregenerować mane",
+        description: "może wymasterować szkoły magii i łatwo sie uczy zaklęć i potrafi se zregenerować mane",
     },
 ]
 

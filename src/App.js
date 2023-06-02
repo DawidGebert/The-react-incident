@@ -32,8 +32,8 @@ const App = (props) => {
     <div>
       <List className='navbar' sx={{ display: "flex", flexDirection: "column", minHeight: "100vh" }} position="static" color="primary">
         <ListItem button onClick={() => {navigate("/"); handleDrawerToggle();}}>Home</ListItem>
+		<ListItem button onClick={() => {navigate("/races"); handleDrawerToggle();}}>Races</ListItem>
         <ListItem button onClick={() => {navigate("/classes"); handleDrawerToggle();}}>Classes</ListItem>
-        <ListItem button onClick={() => {navigate("/races"); handleDrawerToggle();}}>Races</ListItem>
         <ListItem button onClick={() => {navigate("/spells"); handleDrawerToggle();}}>Spells</ListItem>
         <ListItem button onClick={() => {navigate("/passives"); handleDrawerToggle();}}>Passives</ListItem>
       </List>
